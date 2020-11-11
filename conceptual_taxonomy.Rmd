@@ -1,0 +1,66 @@
+---
+title: "Boundary Management Conceptual Taxonomy"
+output:
+  html_document:
+    toc: false
+    #code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+## Instructions
+
+To explore the conceptual taxonomy interactively:
+
+1. Select a conceptual domain.
+
+2. Select a conceptual level.
+
+3. Select a concept.
+
+4. Select a conceptual aspect.
+
+You can also search the taxonomy via the table, below.
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(readxl)
+library(tidyverse)
+library(collapsibleTree)
+library(htmltools)
+library(DT)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+Domains <- read_excel("data/Measurement and Conceptual Taxonomy Table.xlsx", sheet=3)
+```
+
+### Interactive Taxonomy
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+collapsibleTree(
+  Domains,
+  hierarchy = c("Conceptual Domain", 
+                "Conceptual Level", 
+                "Concept",
+                "Conceptual Category",
+                "Conceptual Aspect",
+                "Scale Title & Citation"
+                ),
+  width = 1200,
+  zoomable = TRUE,
+  tooltip = FALSE,
+  collapsed = TRUE
+)
+```
+
+### Searchable Taxonomy
+```{r echo=FALSE}
+Domains %>%
+  dplyr::select(-Citation, -'Scale Title') %>% 
+DT::datatable(., 
+              rownames = FALSE, 
+              filter="top", 
+              options = list(pageLength = 5, scrollX=T) )
+```
+

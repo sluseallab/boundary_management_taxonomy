@@ -1,0 +1,42 @@
+---
+title: "Boundary Management Conceptual & Measurement Taxonomies"
+output: html_document
+---
+
+<!-- <style type="text/css"> -->
+<!-- .title { -->
+<!--   display: none; -->
+<!-- } -->
+
+<!-- #getting-started img { -->
+<!--   margin-right: 10px; -->
+<!-- } -->
+
+<!-- </style> -->
+
+<!-- <div class="row" style="padding-top: 30px;"> -->
+<!-- <div class="col-sm-6"> -->
+
+<!-- # **Boundary Management Conceptual & Measurement Taxonomies** -->
+
+## Instructions
+
+Welcome to the homepage for the boundary management conceptual and measurement taxonomies. To explore the either taxonomy click on the respective "Taxonomy" link, above. 
+
+
+
+<!-- </div> -->
+<!-- <div class="col-sm-6"> -->
+
+<!-- ## Developed By: -->
+
+<!-- ### [Wellness through Employment and Life Laboratory](https://wellab.weebly.com) -->
+<!-- <a href = "https://wellab.weebly.com"> -->
+<!-- <img src="images/logo2.jpg" width="265" height="225"> -->
+
+<!-- ### [SEAL Lab](https://www.cortrudolph.com) -->
+<!-- <a href = "https://www.cortrudolph.com"> -->
+<!-- <img src="images/logo1.png" width="200" height="225"> -->
+
+<!-- </a> -->
+<!-- </div> -->

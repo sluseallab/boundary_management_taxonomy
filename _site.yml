@@ -1,0 +1,11 @@
+name: "Boundary Management Taxonomy"
+navbar:
+  title: "Boundary Management Conceptual & Measurement Taxonomies"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Conceptual Taxonomy"
+      href: conceptual_taxonomy.html
+    - text: "Measurement Taxonomy"
+      href: taxonomy.html
+output_dir: "docs"

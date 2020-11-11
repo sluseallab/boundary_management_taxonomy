@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Boundary Management Conceptual Taxonomy</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/d3-4.10.2/d3.min.js"></script>
+<link href="site_libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="site_libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.4/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Boundary Management Conceptual & Measurement Taxonomies</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="conceptual_taxonomy.html">Conceptual Taxonomy</a>
+</li>
+<li>
+  <a href="taxonomy.html">Measurement Taxonomy</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Boundary Management Conceptual Taxonomy</h1>
+
+</div>
+
+
+<div id="instructions" class="section level2">
+<h2>Instructions</h2>
+<p>To explore the conceptual taxonomy interactively:</p>
+<ol style="list-style-type: decimal">
+<li><p>Select a conceptual domain.</p></li>
+<li><p>Select a conceptual level.</p></li>
+<li><p>Select a concept.</p></li>
+<li><p>Select a conceptual aspect.</p></li>
+</ol>
+<p>You can also search the taxonomy via the table, below.</p>
+<div id="interactive-taxonomy" class="section level3">
+<h3>Interactive Taxonomy</h3>
+<div id="htmlwidget-37aa6f920f3ad4c036e8" style="width:1200px;height:480px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-37aa6f920f3ad4c036e8">{"x":{"data":{"name":"Domains","children":[{"name":"Work-Nonwork","children":[{"name":"Person-Level","children":[{"name":"Permeability","children":[{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Boundaries and Identities - Capra et al. (2013)"},{"name":"Boundary Crossing from Work to Nonwork - Kinnunen et al. (2017)"}]}]},{"name":"Characteristic","children":[{"name":"Behavioral","children":[{"name":"Nonwork Interrupting Work Behaviors - Kossek et al. (2012)"},{"name":"Work Interrupting Nonwork Behaviors - Kossek et al. (2012)"}]},{"name":"N/A","children":[{"name":"Border Strength - König & de la Guardia (2013)"}]}]}]},{"name":"Segmentation-Integration","children":[{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Integration Behaviors - Dumas et al. (2013)"}]},{"name":"Behavioral, Physical, Psychological","children":[{"name":"Life-to-Work Integration Enactment - Wepfer et al. (2018)"},{"name":"Work-to-Life Integration Enactment - Wepfer et al. (2018)"}]},{"name":"Behavioral, Psychological","children":[{"name":"Segmentation/Integration - Worthington (2012)"}]},{"name":"Behavioral, Temporal","children":[{"name":"Segmentation Responses to Clients - Packell (2013)"},{"name":"Segmentation Responses to Supervisor - Packell (2013)"},{"name":"General Segmentation Actions - Packell (2013)"},{"name":"General Segmentation Responses - Packell (2013)"}]},{"name":"Behavioral, Temporal, Physical","children":[{"name":"Role Integration Behaviors - Reyt & Wiesenfeld (2015)"},{"name":"Volition: Part-Time Work - Delanoeije & Verbruggen (2019)"},{"name":"Volition: Telework - Delanoeije & Verbruggen (2019)"}]}]},{"name":"Supply","children":[{"name":"Behavioral, Physical, Psychological","children":[{"name":"Segmentation Supplies - Kreiner (2006)"}]}]},{"name":"Preference","children":[{"name":"Behavioral, Physical, Psychological","children":[{"name":"Segmentation Preferences - Kreiner (2006)"}]}]},{"name":"Demand","children":[{"name":"Behavioral, Psychological","children":[{"name":"Intrusion Pressure - Grotto (2013)"}]}]},{"name":"Appraisal","children":[{"name":"Behavioral, Psychological","children":[{"name":"Intrusion Demands - Grotto (2013)"}]}]}]},{"name":"Technology","children":[{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Spillover-Social Media - Farivar & Richardson (2020)"},{"name":"Personal Internet Use at Work - König & de la Guardia (2013)"},{"name":"Smartphone Use and Work-Related Communication - van Zoonen et al. (2020)"},{"name":"Communication Technology Use - Diaz et al. (2012)"}]},{"name":"Behavioral, Physical, Psychological","children":[{"name":"Spatial and Technological Boundaries - Sonnentag et al. (2009)"}]},{"name":"Behavioral, Temporal","children":[{"name":"Boundaries for Communication Tech Use During Nonwork Time - Olson-Buchanan & Boswell (2006)"},{"name":"Work Connectivity Behaviors After-Hours - Richardson & Benbunan-Fich (2011)"}]}]},{"name":"Appraisal","children":[{"name":"Behavioral","children":[{"name":"Communication Technology Flexibility - Diaz et al. (2012)"}]}]},{"name":"Characteristic","children":[{"name":"Behavioral, Psychological","children":[{"name":"Permeable Work into Life - Nam (2014)"},{"name":"Permeable Life into Work - Nam (2014)"}]},{"name":"Temporal, Physical","children":[{"name":"Flexible Work at Life - Nam (2014)"},{"name":"Flexible Life at Work - Nam (2014)"}]}]},{"name":"Demand","children":[{"name":"Behavioral, Psychological, Physical, Temporal","children":[{"name":"ICT Use - Tennakoon (2018)"}]},{"name":"Temporal","children":[{"name":"Receiving Work-Related Contact Outside of Normal Work Hours - Schieman & Glavin (2008)"}]}]}]},{"name":"Boundary Strength","children":[{"name":"Characteristic","children":[{"name":"Behavioral, Psychological","children":[{"name":"Intrusion Significance - Grotto (2013)"}]},{"name":"Psychological","children":[{"name":"Intrusion Predictability - Grotto (2013)"}]}]},{"name":"Enactment","children":[{"name":"Behavioral, Psychological","children":[{"name":"Boundary Strength at Home - Hecht & Allen (2009)"},{"name":"Boundary Strength at Work - Hecht & Allen (2009)"}]}]}]},{"name":"Control","children":[{"name":"Appraisal","children":[{"name":"Behavioral, Temporal, Physical","children":[{"name":"Boundary Control - Mellner et al. (2014)"}]},{"name":"Psychological","children":[{"name":"Boundary Control - Kossek et al. (2012)"}]}]}]},{"name":"Flexibility","children":[{"name":"Appraisal","children":[{"name":"Behavioral, Temporal, Physical","children":[{"name":"Flexibility - Brown & Palvia (2015)"}]}]},{"name":"Characteristic","children":[{"name":"Physical, Temporal","children":[{"name":"Flexibility - Yun et al. (2012)"}]}]}]},{"name":"Role Blurring","children":[{"name":"Enactment","children":[{"name":"Physical","children":[{"name":"Bringing Work Home - Schieman & Glavin (2008)"}]}]}]}]},{"name":"Organization-Level","children":[{"name":"Segmentation-Integration","children":[{"name":"Appraisal","children":[{"name":"Behavioral","children":[{"name":"Perceived Segmentation Norm - Park et al. (2011)"}]}]}]},{"name":"Control","children":[{"name":"Demand","children":[{"name":"Behavioral, Temporal, Physical","children":[{"name":"Work Pressure - Delanoeije & Verbruggen (2019)"}]}]}]}]},{"name":"Family-Level","children":[{"name":"Control","children":[{"name":"Demand","children":[{"name":"Behavioral, Temporal, Physical","children":[{"name":"Home Pressure - Delanoeije & Verbruggen (2019)"}]}]}]}]}]},{"name":"Work-Family","children":[{"name":"Family-Level","children":[{"name":"Segmentation-Integration","children":[{"name":"Appraisal","children":[{"name":"Behavioral","children":[{"name":"Incumbent Boundary Management Ability - Ferguson et al. (2015)"}]}]}]}]},{"name":"Person-Level","children":[{"name":"Flexibility","children":[{"name":"Appraisal","children":[{"name":"Behavioral","children":[{"name":"Work Boundary Flexibility - Ferguson et al. (2015)"}]},{"name":"Behavioral, Psychological","children":[{"name":"Family Flexibility-Ability - Matthews & Barnes-Farrell (2010)"},{"name":"Work Flexibility-Ability - Matthews & Barnes-Farrell (2010)"}]}]},{"name":"Characteristic","children":[{"name":"Behavioral, Psychological","children":[{"name":"Family Flexibility-Willingness - Matthews & Barnes-Farrell (2010)"},{"name":"Work Flexibility-Willingness - Matthews & Barnes-Farrell (2010)"}]},{"name":"Temporal, Physical","children":[{"name":"Characteristics of the Border Around Family: Flexibility - Clark (2002)"},{"name":"Characteristics of the Border Around Work: Flexibility - Clark (2002)"}]}]},{"name":"Supply","children":[{"name":"Temporal","children":[{"name":"Schedule Flexibility - Kinman & Jones (2008)"}]},{"name":"Temporal, Physical","children":[{"name":"Boundary Flexibility - McCloskey (2018)"}]}]}]},{"name":"Technology","children":[{"name":"Appraisal","children":[{"name":"Behavioral","children":[{"name":"Off-Work Hours Technology-Assisted Job Demand - Ghislieri et al. (2017)"}]}]},{"name":"Enactment","children":[{"name":"Behavioral, Psychological","children":[{"name":"Boundary Creation around CIT Uses: Work Domain - Park & Jex (2011)"}]}]},{"name":"Demand","children":[{"name":"Behavioral, Temporal","children":[{"name":"Work Contact - Schieman & Young (2013)"}]}]}]},{"name":"Segmentation-Integration","children":[{"name":"Preference","children":[{"name":"Behavioral","children":[{"name":"Preferences for Managing Work and Family Roles - Junker & van Dick (2019)"}]},{"name":"Behavioral, Physical, Psychological","children":[{"name":"Preference for Segmenting Family from Work - Park & Jex (2011)"}]}]},{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Boundary Management - McDowall & Lindsay (2014)"},{"name":"Actual Segmentation of Work Domain from Family Domain - Powell & Greenhaus (2010)"},{"name":"Communication with Family about Work - Clark (2002)"},{"name":"Communication with Work Associates about Family - Clark (2002)"}]},{"name":"Behavioral, Psychological","children":[{"name":"Work-Family Role Blurring - Glavin & Schieman (2011)"}]},{"name":"Temporal, Physical","children":[{"name":"Boundary Management Strategy - Kossek et al. (2006)"}]}]},{"name":"Characteristic","children":[{"name":"Behavioral, Psychological, Physical, Temporal","children":[{"name":"Work-Home Separation/Integration - Kinman & Jones (2008)"}]}]}]},{"name":"Control","children":[{"name":"Supply","children":[{"name":"Behavioral","children":[{"name":"Cooperation and Coordination - McDowall & Lindsay (2014)"}]},{"name":"Behavioral, Temporal, Physical","children":[{"name":"Schedule Control - Glavin & Schieman (2011)"},{"name":"Flexibility I-deals - Tang & Hornung (2015)"}]}]},{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Managing Flexibility - McDowall & Lindsay (2014)"},{"name":"Managing Expectations - McDowall & Lindsay (2014)"}]}]},{"name":"Appraisal","children":[{"name":"Temporal, Physical","children":[{"name":"Psychological Job Control - Flexibility - Kossek et al. (2006)"}]}]}]},{"name":"Role Blurring","children":[{"name":"Enactment","children":[{"name":"Behavioral","children":[{"name":"Family-Work Role Blurring - Paulin et al. (2017)"},{"name":"Work-Family Role Blurring - Paulin et al. (2017)"}]},{"name":"Behavioral, Psychological","children":[{"name":"Work-Family Role Blurring - Schieman & Glavin (2016)"}]}]},{"name":"Appraisal","children":[{"name":"Psychological","children":[{"name":"Work-Family Integration-Blurring  - Desrochers et al. (2005)"}]}]}]},{"name":"Permeability","children":[{"name":"Characteristic","children":[{"name":"Behavioral, Physical, Psychological","children":[{"name":"Home Boundary Permeability - McCloskey (2018)"},{"name":"Work Boundary Permeability - McCloskey (2018)"}]},{"name":"Behavioral, Psychological","children":[{"name":"Characteristics of the Border around Work: Permeability - Clark (2002)"}]},{"name":"N/A","children":[{"name":"Permeable Boundaries - Lawson et al. (2013)"}]},{"name":"Psychological, Temporal","children":[{"name":"Characteristics of the Border around Family: Permeability - Clark (2002)"}]}]},{"name":"Enactment","children":[{"name":"Physical, Psychological","children":[{"name":"Family-to-Work Transition - Matthews et al. (2010)"},{"name":"Work-to-Family Transition - Matthews et al. (2010)"}]}]},{"name":"Demand","children":[{"name":"Psychological","children":[{"name":"Boundary Violations at Work - Hunter et al. (2019)"},{"name":"Boundary Violations at Home - Hunter et al. (2019)"}]}]}]}]},{"name":"Organization-Level","children":[{"name":"Segmentation-Integration","children":[{"name":"Appraisal","children":[{"name":"Psychological","children":[{"name":"Work-Nonwork Boundary Management Fit - Bogaerts et al. (2018)"}]}]}]}]}]}]},"options":{"hierarchy":["Conceptual Domain","Conceptual Level","Concept","Conceptual Category","Conceptual Aspect","Scale Title & Citation"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":60,"right":480},"fill":"lightsteelblue"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="searchable-taxonomy" class="section level3">
+<h3>Searchable Taxonomy</h3>
+<div id="htmlwidget-5b9f4e3976d7d8f65f70" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5b9f4e3976d7d8f65f70">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"1\" data-max=\"88\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[[3,5,6,7,8,9,18,21,23,27,28,41,42,43,44,50,53,54,55,63,69,72,87,88,61,29,30,38,39,52,64,65,32,33,34,35,51,75,10,11,12,14,15,47,48,59,77,70,76,19,49,60,78,79,80,81,86,74,56,73,82,83,84,85,2,62,31,22,57,36,37,66,1,4,14,16,17,26,67,20,58,24,68,25,40,45,46,71],["Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Nonwork","Work-Family","Work-Nonwork","Work-Family","Work-Nonwork","Work-Family","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Nonwork","Work-Family","Work-Family","Work-Family","Work-Family","Work-Nonwork","Work-Nonwork","Work-Family"],["Person-Level","Person-Level","Person-Level","Family-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Organization-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Organization-Level","Family-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Organization-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level","Person-Level"],["Permeability","Segmentation-Integration","Technology","Segmentation-Integration","Flexibility","Technology","Segmentation-Integration","Permeability","Technology","Permeability","Permeability","Control","Segmentation-Integration","Control","Control","Segmentation-Integration","Role Blurring","Role Blurring","Segmentation-Integration","Technology","Segmentation-Integration","Segmentation-Integration","Technology","Technology","Technology","Segmentation-Integration","Segmentation-Integration","Permeability","Permeability","Segmentation-Integration","Segmentation-Integration","Segmentation-Integration","Flexibility","Flexibility","Flexibility","Flexibility","Technology","Segmentation-Integration","Boundary Strength","Segmentation-Integration","Segmentation-Integration","Boundary Strength","Boundary Strength","Technology","Technology","Role Blurring","Segmentation-Integration","Permeability","Technology","Segmentation-Integration","Technology","Technology","Segmentation-Integration","Segmentation-Integration","Segmentation-Integration","Segmentation-Integration","Technology","Control","Segmentation-Integration","Control","Control","Control","Segmentation-Integration","Segmentation-Integration","Flexibility","Control","Permeability","Permeability","Role Blurring","Permeability","Permeability","Flexibility","Segmentation-Integration","Role Blurring","Boundary Strength","Permeability","Permeability","Control","Permeability","Flexibility","Technology","Segmentation-Integration","Flexibility","Control","Flexibility","Technology","Technology","Flexibility"],["Enactment","Enactment","Enactment","Appraisal","Appraisal","Appraisal","Preference","Enactment","Enactment","Characteristic","Characteristic","Supply","Enactment","Enactment","Enactment","Appraisal","Enactment","Enactment","Enactment","Enactment","Enactment","Enactment","Appraisal","Enactment","Enactment","Supply","Preference","Characteristic","Characteristic","Preference","Enactment","Enactment","Characteristic","Appraisal","Appraisal","Characteristic","Enactment","Enactment","Characteristic","Demand","Appraisal","Enactment","Enactment","Characteristic","Characteristic","Enactment","Enactment","Characteristic","Demand","Characteristic","Enactment","Demand","Enactment","Enactment","Enactment","Enactment","Enactment","Supply","Enactment","Appraisal","Demand","Demand","Enactment","Enactment","Appraisal","Supply","Characteristic","Characteristic","Enactment","Enactment","Enactment","Characteristic","Appraisal","Appraisal","Characteristic","Demand","Demand","Appraisal","Characteristic","Supply","Demand","Enactment","Characteristic","Appraisal","Supply","Characteristic","Characteristic","Characteristic"],["Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Physical, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological","Behavioral, Psychological, Physical, Temporal","Behavioral, Psychological, Physical, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","Behavioral, Temporal, Physical","N/A","N/A","Physical","Physical, Psychological","Physical, Psychological","Physical, Temporal","Psychological","Psychological","Psychological","Psychological","Psychological","Psychological","Psychological, Temporal","Temporal","Temporal","Temporal, Physical","Temporal, Physical","Temporal, Physical","Temporal, Physical","Temporal, Physical","Temporal, Physical","Temporal, Physical"],["Boundaries and Identities - Capra et al. (2013)","Integration Behaviors - Dumas et al. (2013)","Spillover-Social Media - Farivar &amp; Richardson (2020)","Incumbent Boundary Management Ability - Ferguson et al. (2015)","Work Boundary Flexibility - Ferguson et al. (2015)","Off-Work Hours Technology-Assisted Job Demand - Ghislieri et al. (2017)","Preferences for Managing Work and Family Roles - Junker &amp; van Dick (2019)","Boundary Crossing from Work to Nonwork - Kinnunen et al. (2017)","Personal Internet Use at Work - König &amp; de la Guardia (2013)","Nonwork Interrupting Work Behaviors - Kossek et al. (2012)","Work Interrupting Nonwork Behaviors - Kossek et al. (2012)","Cooperation and Coordination - McDowall &amp; Lindsay (2014)","Boundary Management - McDowall &amp; Lindsay (2014)","Managing Flexibility - McDowall &amp; Lindsay (2014)","Managing Expectations - McDowall &amp; Lindsay (2014)","Perceived Segmentation Norm - Park et al. (2011)","Family-Work Role Blurring - Paulin et al. (2017)","Work-Family Role Blurring - Paulin et al. (2017)","Actual Segmentation of Work Domain from Family Domain - Powell &amp; Greenhaus (2010)","Smartphone Use and Work-Related Communication - van Zoonen et al. (2020)","Communication with Family about Work - Clark (2002)","Communication with Work Associates about Family - Clark (2002)","Communication Technology Flexibility - Diaz et al. (2012)","Communication Technology Use - Diaz et al. (2012)","Spatial and Technological Boundaries - Sonnentag et al. (2009)","Segmentation Supplies - Kreiner (2006)","Segmentation Preferences - Kreiner (2006)","Home Boundary Permeability - McCloskey (2018)","Work Boundary Permeability - McCloskey (2018)","Preference for Segmenting Family from Work - Park &amp; Jex (2011)","Life-to-Work Integration Enactment - Wepfer et al. (2018)","Work-to-Life Integration Enactment - Wepfer et al. (2018)","Family Flexibility-Willingness - Matthews &amp; Barnes-Farrell (2010)","Family Flexibility-Ability - Matthews &amp; Barnes-Farrell (2010)","Work Flexibility-Ability - Matthews &amp; Barnes-Farrell (2010)","Work Flexibility-Willingness - Matthews &amp; Barnes-Farrell (2010)","Boundary Creation around CIT Uses: Work Domain - Park &amp; Jex (2011)","Work-Family Role Blurring - Glavin &amp; Schieman (2011)","Intrusion Significance - Grotto (2013)","Intrusion Pressure - Grotto (2013)","Intrusion Demands - Grotto (2013)","Boundary Strength at Home - Hecht &amp; Allen (2009)","Boundary Strength at Work - Hecht &amp; Allen (2009)","Permeable Work into Life - Nam (2014)","Permeable Life into Work - Nam (2014)","Work-Family Role Blurring - Schieman &amp; Glavin (2016)","Segmentation/Integration - Worthington (2012)","Characteristics of the Border around Work: Permeability - Clark (2002)","ICT Use - Tennakoon (2018)","Work-Home Separation/Integration - Kinman &amp; Jones (2008)","Boundaries for Communication Tech Use During Nonwork Time - Olson-Buchanan &amp; Boswell (2006)","Work Contact - Schieman &amp; Young (2013)","Segmentation Responses to Clients - Packell (2013)","Segmentation Responses to Supervisor - Packell (2013)","General Segmentation Actions - Packell (2013)","General Segmentation Responses - Packell (2013)","Work Connectivity Behaviors After-Hours - Richardson &amp; Benbunan-Fich (2011)","Schedule Control - Glavin &amp; Schieman (2011)","Role Integration Behaviors - Reyt &amp; Wiesenfeld (2015)","Boundary Control - Mellner et al. (2014)","Work Pressure - Delanoeije &amp; Verbruggen (2019)","Home Pressure - Delanoeije &amp; Verbruggen (2019)","Volition: Part-Time Work - Delanoeije &amp; Verbruggen (2019)","Volition: Telework - Delanoeije &amp; Verbruggen (2019)","Flexibility - Brown &amp; Palvia (2015)","Flexibility I-deals - Tang &amp; Hornung (2015)","Permeable Boundaries - Lawson et al. (2013)","Border Strength - König &amp; de la Guardia (2013)","Bringing Work Home - Schieman &amp; Glavin (2008)","Family-to-Work Transition - Matthews et al. (2010)","Work-to-Family Transition - Matthews et al. (2010)","Flexibility - Yun et al. (2012)","Work-Nonwork Boundary Management Fit - Bogaerts et al. (2018)","Work-Family Integration-Blurring  - Desrochers et al. (2005)","Intrusion Predictability - Grotto (2013)","Boundary Violations at Work - Hunter et al. (2019)","Boundary Violations at Home - Hunter et al. (2019)","Boundary Control - Kossek et al. (2012)","Characteristics of the Border around Family: Permeability - Clark (2002)","Schedule Flexibility - Kinman &amp; Jones (2008)","Receiving Work-Related Contact Outside of Normal Work Hours - Schieman &amp; Glavin (2008)","Boundary Management Strategy - Kossek et al. (2006)","Characteristics of the Border Around Family: Flexibility - Clark (2002)","Psychological Job Control - Flexibility - Kossek et al. (2006)","Boundary Flexibility - McCloskey (2018)","Flexible Work at Life - Nam (2014)","Flexible Life at Work - Nam (2014)","Characteristics of the Border Around Work: Flexibility - Clark (2002)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Index<\/th>\n      <th>Conceptual Domain<\/th>\n      <th>Conceptual Level<\/th>\n      <th>Concept<\/th>\n      <th>Conceptual Category<\/th>\n      <th>Conceptual Aspect<\/th>\n      <th>Scale Title &amp; Citation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
