@@ -1,5 +1,5 @@
 ---
-title: "Boundary Management Measurement Taxonomy"
+title: "Taxonomy"
 output:
   html_document:
     toc: false
@@ -12,19 +12,17 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 ## Instructions
 
-To explore the measurement taxonomy interactively:
+To explore the boundary management ineractive measurement taxonomy:
 
 1. Select a scale domain.
 
-2. Select a scale level
+2. Select a scale referent (i.e., level)
 
 3. Select a scale construct.
 
 4. Select a scale category.
 
 5. Select a scale aspect.
-
-You can also search the taxonomy via the table, below.
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(readxl)
@@ -35,16 +33,15 @@ library(DT)
 ```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
-Domains <- read_excel("data/Measurement and Conceptual Taxonomy Table.xlsx", sheet=1)
-Domains_Table <- read_excel("data/Measurement and Conceptual Taxonomy Table.xlsx", sheet=2)
+Domain <- read_excel("data/Boundary_Management_Tables.xlsx", sheet=4)
 ```
 
-### Interactive Taxonomy
+### Interactive Measurement Taxonomy
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
 collapsibleTree(
-  Domains,
+  Domain,
   hierarchy = c("Scale Domain", 
-                "Scale Level", 
+                "Scale Referent", 
                 "Scale Construct",
                 "Scale Category",
                 "Scale Aspect",
@@ -57,11 +54,5 @@ collapsibleTree(
 )
 ```
 
-### Searchable Taxonomy
-```{r echo=FALSE}
-DT::datatable(Domains_Table, 
-              rownames = FALSE, 
-              filter="top", 
-              options = list(pageLength = 5, scrollX=T) )
-```
+
 

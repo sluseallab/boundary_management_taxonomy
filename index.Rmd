@@ -1,5 +1,6 @@
 ---
-title: "Boundary Management Conceptual & Measurement Taxonomies"
+title: "Measuring Boundaries and Borders: A Systematic Review and Content Analysis of Work-Nonwork Boundary Management Scales"
+subtitle: "Boundary Management Definitions, Dynamic Tables, and Interactive Measurement Taxonomy"
 output: html_document
 ---
 
@@ -19,9 +20,14 @@ output: html_document
 
 <!-- # **Boundary Management Conceptual & Measurement Taxonomies** -->
 
-## Instructions
+<br>
+<br>
 
-Welcome to the homepage for the boundary management conceptual and measurement taxonomies. To explore the either taxonomy click on the respective "Taxonomy" link, above. 
+#### Instructions
+
+Welcome to the homepage for the paper **_Measuring Boundaries and Borders: A Systematic Review and Content Analysis of Work-Nonwork Boundary Management Scales_**. 
+
+To explore the boundary management definitions, dynamic (i.e., searchable/sortable) tables, or the interactive measurement taxonomy, click on the respective link, above. 
 
 
 

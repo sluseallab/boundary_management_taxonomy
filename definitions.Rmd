@@ -1,0 +1,30 @@
+---
+title: "Definitions"
+output:
+  html_document:
+    toc: false
+    #code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(readxl)
+library(tidyverse)
+library(htmltools)
+library(DT)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+definitions <- read_excel("data/Boundary_Management_Tables.xlsx", sheet=1)
+```
+
+### Table A1. *Boundary Management Definitions*
+```{r echo=FALSE}
+definitions %>%
+  DT::datatable(., 
+              rownames = FALSE, 
+              options = list(pageLength = 5, scrollX=T, scrollY=T))
+```
