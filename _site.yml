@@ -6,6 +6,8 @@ navbar:
       href: index.html
     - text: "Definitions"
       href: definitions.html
+    - text: "Theories"
+      href: theories.html      
     - text: "Tables"
       href: tables.html
     - text: "Taxonomy"

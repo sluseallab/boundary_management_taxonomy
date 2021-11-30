@@ -1,5 +1,5 @@
 ---
-title: "Tables"
+title: "Theories"
 output:
   html_document:
     toc: false
@@ -18,22 +18,13 @@ library(DT)
 ```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
-table_one <- read_excel("data/Boundary_Management_Tables.xlsx", sheet=3)
-table_two <- read_excel("data/Boundary_Management_Tables.xlsx", sheet=4)
+definitions <- read_excel("data/Boundary_Management_Tables.xlsx", sheet=2)
 ```
 
-### Table 1. *Scale Properties and Gaps Between Concept Definitions and Scale Items*
+### Table A2. *Summary of Border and Boundary Theories*
 ```{r echo=FALSE}
-table_one %>%
+definitions %>%
   DT::datatable(., 
               rownames = FALSE, 
               options = list(pageLength = 5, scrollX=T, scrollY=T))
-```
-
-### Table 2. *The Measurement Taxonomy*
-```{r echo=FALSE}
-table_two %>%
-  DT::datatable(., 
-                rownames = FALSE, 
-                options = list(pageLength = 5, scrollX=T, scrollY=T))
 ```
